@@ -1,5 +1,4 @@
-﻿using Organista.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,18 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Organista
+namespace Organista.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy SaveWork.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SaveWork : UserControl
     {
-        public MainWindow()
+        public SaveWork()
         {
             InitializeComponent();
-
-            DataContext = new MainViewModel();
         }
     }
 }
