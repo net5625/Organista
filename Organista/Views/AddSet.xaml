@@ -20,7 +20,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <Label FontSize="48" Foreground="White" FontFamily="Century Ghotic" Content="Dodaj zestaw" HorizontalAlignment="Center" />
+            <Label Content="Dodaj zestaw" />
         </DockPanel>
+        
     </Grid>
 </UserControl>

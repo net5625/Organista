@@ -18,7 +18,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <Label FontSize="48" Foreground="White" FontFamily="Century Ghotic" Content="Generuj sprawozdanie" HorizontalAlignment="Center" />
+            <Label Style="{StaticResource ResourceKey=Title}" Content="Generuj sprawozdanie" />
         </DockPanel>
+        
+        <Label Grid.Row="1" Grid.Column="0" Content="Data początkowa:" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Data końcowa:" />
+        
+        <!--Kolumna 2-->
+        <DatePicker TabIndex="0" Grid.Row="1" Grid.Column="1" />
+        <DatePicker TabIndex="1" Grid.Row="2" Grid.Column="1" />
+
+        <Button TabIndex="2" Grid.Row="3" Grid.Column="2" Content="Generuj" Margin="15,15,15,15"/>
     </Grid>
 </UserControl>

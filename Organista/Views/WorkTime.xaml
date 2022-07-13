@@ -22,7 +22,33 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
-            <Label FontSize="48" Foreground="White" FontFamily="Century Ghotic" Content="Zapisz aktywność" HorizontalAlignment="Center" />
+            <Label Style="{StaticResource ResourceKey=Title}" Content="Zapisz aktywność"/>
         </DockPanel>
+        <GroupBox Template="{StaticResource GBox}" Header="Data"  Grid.Row="1">
+            <DatePicker TabIndex="0" x:Name="Date" Grid.Column="1" VerticalAlignment="Center"/>
+        </GroupBox>
+        <GroupBox Template="{StaticResource GBox}" Header="Msza"  Grid.Row="2">
+            <TextBox Style="{StaticResource Time}" TabIndex="1" x:Name="Mass" Grid.Column="1" />
+        </GroupBox>
+        <GroupBox Template="{StaticResource GBox}" Header="Nabożeństwo"  Grid.Row="3">
+            <TextBox Style="{StaticResource Time}" TabIndex="2" x:Name="Devotion" Grid.Column="1" />
+        </GroupBox>
+        <GroupBox Template="{StaticResource GBox}" Header="Godzinki"  Grid.Row="4">
+            <TextBox Style="{StaticResource Time}" TabIndex="3" x:Name="Houers" Grid.Column="1" />
+        </GroupBox>
+        <!--Druga kolumna-->
+        <GroupBox Template="{StaticResource GBox}" Header="Ślub"  Grid.Row="1" Grid.Column="1">
+            <TextBox Style="{StaticResource Time}" TabIndex="4" x:Name="Wedding" Grid.Column="1" />
+        </GroupBox>
+        <GroupBox Template="{StaticResource GBox}" Header="Pogrzeb" Grid.Column="1" Grid.Row="2">
+            <TextBox Style="{StaticResource Time}" TabIndex="5" x:Name="Funeral" Grid.Column="1" />
+        </GroupBox>
+        <GroupBox Template="{StaticResource GBox}" Header="Droga krzyżowa" Grid.Column="1" Grid.Row="3">
+            <TextBox Style="{StaticResource Time}" TabIndex="6" x:Name="Cross" Grid.Column="1" />
+        </GroupBox>
+        <GroupBox Template="{StaticResource GBox}" Header="Nabożeństwa Pasyjne" Grid.Column="1" Grid.Row="4">
+            <TextBox Style="{StaticResource Time}" TabIndex="7" x:Name="Bitter" Grid.Column="1" />
+        </GroupBox>
+        <Button TabIndex="8" Grid.Column="1" Grid.Row="5" Content="Zapisz" Margin="10,10,10,10" />
     </Grid>
 </UserControl>

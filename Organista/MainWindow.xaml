@@ -6,61 +6,6 @@
         xmlns:local="clr-namespace:Organista"
         mc:Ignorable="d"
         Title="Organista v2.0" Height="600" Width="900" MinWidth="750" MinHeight="450">
-    <Window.Resources>
-        <SolidColorBrush x:Key="Button.Static.Background" Color="ForestGreen"/>
-        <SolidColorBrush x:Key="Button.Static.Border" Color="Green"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#fff"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="Black" />
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="Aqua"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="Beige"/>
-        <SolidColorBrush x:Key="Button.Disabled.Background" Color="Gray"/>
-        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#222"/>
-        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#0f0f0f"/>
-        <Style TargetType="Button">
-            <Setter Property="Opacity" Value="0.95"/>
-            <!--<Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
-            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />-->
-            <Setter Property="Margin" Value="0,10,0,5" />
-            <Setter Property="FontSize" Value="16" />
-            <Setter Property="FontFamily" Value="Century Ghotic" />
-            <Setter Property="FontWeight" Value="DemiBold" />
-            <Setter Property="Padding" Value="1,15,1,15" />
-            
-            
-            <!--<Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsDefaulted" Value="True">
-                                <Setter Property="Background" Value="{StaticResource Button.Static.Background}" />
-                                <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}" />
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True" >
-                                <Setter Property="Background" Value="{StaticResource Button.MouseOver.Background}" />
-                                <Setter Property="BorderBrush" Value="{StaticResource Button.MouseOver.Border}" />
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter Property="Background" Value="{StaticResource Button.Pressed.Background}" />
-                                <Setter Property="BorderBrush" Value="{StaticResource Button.Pressed.Border}" />
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter Property="Background" Value="{StaticResource Button.Disabled.Background}" />
-                                <Setter Property="BorderBrush" Value="{StaticResource Button.Disabled.Border}" />
-                                <Setter Property="Foreground" Value="{StaticResource Button.Disabled.Foreground}" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>-->
-            
-            
-            <!--<Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True" >
-                    <Setter Property="Foreground" Value="Yellow"/>
-                </Trigger>
-            </Style.Triggers>-->
-        </Style>
-    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -74,13 +19,13 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <DockPanel Background="MediumSeaGreen" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4">
+        <DockPanel Background="MediumSeaGreen" Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" >
             <StackPanel>
                 <Button Content="Dodaj czas pracy" Command="{Binding UpdateViewCommand}" CommandParameter="Time" />
-                <Button Content="Dodaj zestaw" Command="{Binding UpdateViewCommand}" CommandParameter="Set" />
-                <Button Content="Podejrzyj zestaw" Command="{Binding UpdateViewCommand}" CommandParameter="See" />
+                <Button IsEnabled="False" Content="Dodaj zestaw" Command="{Binding UpdateViewCommand}" CommandParameter="Set" />
+                <Button IsEnabled="False" Content="Podejrzyj zestaw" Command="{Binding UpdateViewCommand}" CommandParameter="See" />
                 <Button Content="Zapisz sprawozdanie" Command="{Binding UpdateViewCommand}" CommandParameter="Save" />
-                <Button Content="Ustawienia" Command="{Binding UpdateViewCommand}" CommandParameter="Setting"/>
+                <Button IsEnabled="False" Content="Ustawienia" Command="{Binding UpdateViewCommand}" CommandParameter="Setting"/>
                 <Button Content="Wyjście" Command="{Binding UpdateViewCommand}" CommandParameter="Exit"/>
             </StackPanel>
         </DockPanel>
