@@ -1,6 +1,6 @@
 ﻿namespace Organista.ViewModels
 {
-    internal class SaveWorkViewModel : BaseViewModel
+    public class SaveWorkViewModel : BaseViewModel
     {
     }
 }

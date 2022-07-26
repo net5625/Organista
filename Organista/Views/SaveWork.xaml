@@ -25,9 +25,9 @@
         <Label Grid.Row="2" Grid.Column="0" Content="Data końcowa:" />
         
         <!--Kolumna 2-->
-        <DatePicker TabIndex="0" Grid.Row="1" Grid.Column="1" />
-        <DatePicker TabIndex="1" Grid.Row="2" Grid.Column="1" />
+        <DatePicker Name="StartDate" TabIndex="1" Grid.Row="1" Grid.Column="1" />
+        <DatePicker Name="EndDate" TabIndex="2" Grid.Row="2" Grid.Column="1" />
 
-        <Button TabIndex="2" Grid.Row="3" Grid.Column="2" Content="Generuj" Margin="15,15,15,15"/>
+        <Button TabIndex="3" Grid.Row="3" Grid.Column="2" Content="Generuj" Margin="25,30,25,30"/>
     </Grid>
 </UserControl>

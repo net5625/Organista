@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:Organista.Views"
              xmlns:viewmodels="clr-namespace:Organista.ViewModels"
              xmlns:views="clr-namespace:Organista.Views"
+             xmlns:components="clr-namespace:Organista.Components"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="Black">
@@ -25,30 +26,37 @@
             <Label Style="{StaticResource ResourceKey=Title}" Content="Zapisz aktywność"/>
         </DockPanel>
         <GroupBox Template="{StaticResource GBox}" Header="Data"  Grid.Row="1">
-            <DatePicker TabIndex="0" x:Name="Date" Grid.Column="1" VerticalAlignment="Center"/>
+            <DatePicker TabIndex="1" x:Name="Date" Grid.Column="1" VerticalAlignment="Center"/>
         </GroupBox>
         <GroupBox Template="{StaticResource GBox}" Header="Msza"  Grid.Row="2">
-            <TextBox Style="{StaticResource Time}" TabIndex="1" x:Name="Mass" Grid.Column="1" />
+            <!--<TextBox Style="{StaticResource Time}" TabIndex="1" x:Name="Mass" Grid.Column="1" />-->
+            <components:NumericBox TabIndex="2" x:Name="Mass" Grid.Column="1"></components:NumericBox>
         </GroupBox>
         <GroupBox Template="{StaticResource GBox}" Header="Nabożeństwo"  Grid.Row="3">
-            <TextBox Style="{StaticResource Time}" TabIndex="2" x:Name="Devotion" Grid.Column="1" />
+            <!--<TextBox Style="{StaticResource Time}" TabIndex="2" x:Name="Devotion" Grid.Column="1" />-->
+            <components:NumericBox TabIndex="3" x:Name="Devotion" Grid.Column="1"></components:NumericBox>
         </GroupBox>
         <GroupBox Template="{StaticResource GBox}" Header="Godzinki"  Grid.Row="4">
-            <TextBox Style="{StaticResource Time}" TabIndex="3" x:Name="Houers" Grid.Column="1" />
+            <!--<TextBox Style="{StaticResource Time}" TabIndex="3" x:Name="Houers" Grid.Column="1" />-->
+            <components:NumericBox TabIndex="4" x:Name="Houers" Grid.Column="1"></components:NumericBox>
         </GroupBox>
         <!--Druga kolumna-->
         <GroupBox Template="{StaticResource GBox}" Header="Ślub"  Grid.Row="1" Grid.Column="1">
-            <TextBox Style="{StaticResource Time}" TabIndex="4" x:Name="Wedding" Grid.Column="1" />
+            <!--<TextBox Style="{StaticResource Time}" TabIndex="4" x:Name="Wedding" Grid.Column="1" />-->
+            <components:NumericBox TabIndex="5" x:Name="Wedding" Grid.Column="1"></components:NumericBox>
         </GroupBox>
         <GroupBox Template="{StaticResource GBox}" Header="Pogrzeb" Grid.Column="1" Grid.Row="2">
-            <TextBox Style="{StaticResource Time}" TabIndex="5" x:Name="Funeral" Grid.Column="1" />
+            <!--<TextBox Style="{StaticResource Time}" TabIndex="5" x:Name="Funeral" Grid.Column="1" />-->
+            <components:NumericBox TabIndex="6" x:Name="Funeral" Grid.Column="1"></components:NumericBox>
         </GroupBox>
         <GroupBox Template="{StaticResource GBox}" Header="Droga krzyżowa" Grid.Column="1" Grid.Row="3">
-            <TextBox Style="{StaticResource Time}" TabIndex="6" x:Name="Cross" Grid.Column="1" />
+            <!--<TextBox Style="{StaticResource Time}" TabIndex="6" x:Name="Cross" Grid.Column="1" />-->
+            <components:NumericBox TabIndex="7" x:Name="Cross" Grid.Column="1"></components:NumericBox>
         </GroupBox>
         <GroupBox Template="{StaticResource GBox}" Header="Nabożeństwa Pasyjne" Grid.Column="1" Grid.Row="4">
-            <TextBox Style="{StaticResource Time}" TabIndex="7" x:Name="Bitter" Grid.Column="1" />
+            <!--<TextBox Style="{StaticResource Time}" TabIndex="7" x:Name="Bitter" Grid.Column="1" />-->
+            <components:NumericBox TabIndex="8" x:Name="Bitter" Grid.Column="1"></components:NumericBox>
         </GroupBox>
-        <Button TabIndex="8" Grid.Column="1" Grid.Row="5" Content="Zapisz" Margin="10,10,10,10" />
+        <Button TabIndex="9" Grid.Column="1" Grid.Row="5" Content="Zapisz" Margin="10,10,10,10" Click="Button_Click" />
     </Grid>
 </UserControl>

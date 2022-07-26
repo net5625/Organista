@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Organista.Model;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +17,12 @@ namespace Organista
     /// </summary>
     public partial class App : Application
     {
+        private static void ConfigureServices(IConfiguration configuration, IServiceCollection services)
+        {
+            services.AddDbContext<ModelContext>
+            (options => options.UseSQLite("Data Source=rejestr.db;"));
+
+            services.AddTransient(typeof(MainWindow));
+        }
     }
 }

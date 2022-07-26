@@ -1,6 +1,6 @@
 ﻿namespace Organista.ViewModels
 {
-    internal class EnteredSetsViewModel : BaseViewModel
+    public class EnteredSetsViewModel : BaseViewModel
     {
     }
 }

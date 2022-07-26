@@ -10,7 +10,7 @@ namespace Organista.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {
-        private BaseViewModel _selectedViewModel = new SaveWorkViewModel();
+        private BaseViewModel _selectedViewModel = new WorkTimeViewModel();
 
         public BaseViewModel SelectedViewModel
         {
